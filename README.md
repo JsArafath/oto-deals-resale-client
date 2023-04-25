@@ -1,28 +1,34 @@
-# Project Name : Oto-deals-resell
+<h1 align="center">Oto Deal</h1>
 
-## Website type : oto-deals-resell platform for used phone
-
-### Livesite - https://buy-sell-products-15c71.web.app/
-
-#### Github - client-site: https://github.com/JsArafath/oto-deals-resell-client
-
-#### Server-side : https://github.com/AnisurRahman06046/oto-deals-Server-Side
-
-##### Admin Acc :
+#  About Online Oto Deal
+## Live Site: https://oto-deals-products-resell.web.app/
 
 
+Here is Some Navbar (Catagories, Blog, Register, Login).
+This is a responsive  site. 
+So, Everyone can use it with any devices.
 
-###### Features:
 
-- People can buy and sell used mobile phone
-- People can create account as a seller and buyer
-- private route for buyers,sellers and admin
-- jwt verification to secure route
-- Seller can add products
-- Admin can delete buyers or sellers
-- Sellers can delete his/her product
-- payment system
+## There Are Some Topic About Travelling.....
 
-###### Technologies:
+# *  Some Tour sections:
+    * Sellers can add their products and sell on this website.
+    * Buyers can buy products on this website.
+    * There is a Admin section 
+  
 
-- HTML,CSS,Javascript,ReactJs,NodeJs,ExpressJs,Mongodb,react-stripe,JWT,DaisyUi & MambaUi,dotenv
+Everyone can use this simple website and join with our website for enjoy their tour.
+## To make this website technologies use.....
+
+# *  Front-End
+    * React JS
+    * Firebase Authentication
+    * Tailwind CSS (Daisy UI)
+    
+# *  Back-End
+    * Express JS
+    * Vercel 
+    * MongoDB
+    * NodeJs
+    * React-Stripe
+    * JWT
