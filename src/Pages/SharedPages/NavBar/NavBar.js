@@ -15,7 +15,13 @@ const NavBar = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="text-sm font-semibold">
+        <Link to="/allcategories">Categories</Link>
+      </li>
+      <li className="text-sm font-semibold">
         <Link to="/blog">Blog</Link>
+      </li>
+      <li className="text-sm font-semibold">
+        <Link to="/contact">Contact</Link>
       </li>
       {user?.uid ? (
         <>

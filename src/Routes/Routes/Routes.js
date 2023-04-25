@@ -18,6 +18,8 @@ import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import BuyerRoute from "../BuyerRoute/BuyerRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Contact from "../../Pages/Home/Contact/Contact";
+import AllCategories from "../../Pages/Home/Categories/AllCategories";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +31,20 @@ export const router = createBrowserRouter([
       { path: "/login", element: <LogIn></LogIn> },
       { path: "/signup", element: <SignUp></SignUp> },
       { path: "/blog", element: <Blog></Blog> },
+      { path: "/contact", element: <Contact></Contact> },
+      { path: "/allcategories", element: <AllCategories></AllCategories> },
+      {
+        path: "/allcategories/products/:id",
+        element: (
+          
+          <PrivateRoute>
+            <Products></Products>
+          </PrivateRoute>
+         
+        ),
+        loader: ({ params }) =>
+          fetch(` http://localhost:5000/products/${params.id}`),
+      },
       {
         path: "/products/:id",
         element: (

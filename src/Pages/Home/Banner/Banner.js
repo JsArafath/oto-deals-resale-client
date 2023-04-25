@@ -60,7 +60,7 @@
 
 import { Link } from "react-router-dom";
 // import "swiper/css";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import Typewriter from "typewriter-effect";
 import img2 from "../../../assets/samsung-galaxy-q2-5g-black-spin-thumb.jpeg";
 import "./Banner.css";
@@ -68,8 +68,8 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div>
-      <Swiper spaceBetween={10} slidesPerView={1}>
-        <SwiperSlide>
+      {/* <Swiper spaceBetween={10} slidesPerView={1}> */}
+        
           <div className="absolute bg-gray-900 opacity-50 w-full h-full "></div>
           <div className="absolute w-full h-full  flex flex-col justify-center ">
             <section className="text-white py-20 p-5 md:p-20">
@@ -99,8 +99,8 @@ const Banner = () => {
           </div>
 
           <img src={img2} className="w-full " alt="00" />
-        </SwiperSlide>
-      </Swiper>
+     
+      
     </div>
   );
 };

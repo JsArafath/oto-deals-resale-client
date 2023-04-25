@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c11a090.css",
+    "main.js": "/static/js/main.d202d4da.js",
+    "static/js/787.1066eabb.chunk.js": "/static/js/787.1066eabb.chunk.js",
+    "static/media/57946-profile-user-card.gif": "/static/media/57946-profile-user-card.9d2be482a74bc9ad08b0.gif",
+    "static/media/90723-cab-booking.gif": "/static/media/90723-cab-booking.42b25959ef8dfafe8a10.gif",
+    "static/media/14521-hotel-booking.gif": "/static/media/14521-hotel-booking.96770b4ae1eeb9258c24.gif",
+    "static/media/Untitled-3.png": "/static/media/Untitled-3.849b0bd4a665ab82e14e.png",
+    "static/media/23730-3d-mobile-payment.gif": "/static/media/23730-3d-mobile-payment.752509d1067edf8a5fa4.gif",
+    "static/media/5603789_2949042-removebg-preview.png": "/static/media/5603789_2949042-removebg-preview.f73c8aae4b578767b6d7.png",
+    "static/media/samsung-galaxy-q2-5g-black-spin-thumb.jpeg": "/static/media/samsung-galaxy-q2-5g-black-spin-thumb.4e9b1f4c142137edb646.jpeg",
+    "index.html": "/index.html",
+    "main.0c11a090.css.map": "/static/css/main.0c11a090.css.map",
+    "main.d202d4da.js.map": "/static/js/main.d202d4da.js.map",
+    "787.1066eabb.chunk.js.map": "/static/js/787.1066eabb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c11a090.css",
+    "static/js/main.d202d4da.js"
+  ]
+}

@@ -16,7 +16,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const [registeredUserEmail, setRegisteredUserEmail] = useState("");
   const [token] = useToken(registeredUserEmail);
-  if (token) {
+  if (user) {
     navigate("/");
   }
   //   console.log(user?.displayName);
@@ -65,7 +65,7 @@ const SignUp = () => {
  
   //   jwt token for registered user
   //   const registeredUserToken = (email) => {
-  //     fetch(` https://server-mobilebazar.vercel.app/JWT?email=${email}`)
+  //     fetch(` http://localhost:5000/JWT?email=${email}`)
   //       .then((res) => res.json())
   //       .then((data) => {
   //         if (data.accessToken) {

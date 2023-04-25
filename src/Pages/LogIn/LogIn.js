@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import useToken from "../../hooks/useToken";
+import './Login.css'
 
 const LogIn = () => {
   const { logIn } = useContext(AuthContext);
@@ -40,7 +41,7 @@ const LogIn = () => {
       });
   };
   return (
-    <div className="h-[800px] flex justify-center items-center">
+    <div className="h-[800px] flex justify-center pics items-center">
       <div className="w-96 p-7 bg-gray-800 rounded">
         <h1 className="text-2xl text-center text-white font-bold">Login</h1>
         <form onSubmit={handleSubmit(handleLoginform)}>
