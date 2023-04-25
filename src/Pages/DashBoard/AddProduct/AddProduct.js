@@ -22,7 +22,7 @@ const AddProduct = () => {
     queryKey: ["productbrandname"],
     queryFn: async () => {
       const res = await fetch(
-        " http://localhost:5000/productbrandname"
+        " https://oto-deals-resell-server.onrender.com/productbrandname"
       );
       const data = await res.json();
       return data;

@@ -31,7 +31,7 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
     };
 
     console.log(modalInfo);
-    fetch(" http://localhost:5000/bookeditems", {
+    fetch(" https://oto-deals-resell-server.onrender.com/bookeditems", {
       method: "POST",
       headers: {
         "content-type": "application/json",

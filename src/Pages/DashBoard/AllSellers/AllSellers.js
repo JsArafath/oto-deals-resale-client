@@ -6,7 +6,7 @@ const AllSellers = () => {
     queryKey: ["allsellers"],
     queryFn: async () => {
       const res = await fetch(
-        " http://localhost:5000/users/allsellers"
+        " https://oto-deals-resell-server.onrender.com/users/allsellers"
       );
       const data = await res.json();
       return data;
@@ -14,7 +14,7 @@ const AllSellers = () => {
   });
   const handleSellerDelete = (id) => {
     console.log(id);
-    fetch(` http://localhost:5000/seller/${id}`, {
+    fetch(` https://oto-deals-resell-server.onrender.com/seller/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -31,7 +31,7 @@ const AllSellers = () => {
   };
   const handleSellerVerify = (id) => {
     console.log(id);
-    fetch(` http://localhost:5000/seller/verify/${id}`, {
+    fetch(` https://oto-deals-resell-server.onrender.com/seller/verify/${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())

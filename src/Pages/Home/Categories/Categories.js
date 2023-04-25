@@ -8,7 +8,7 @@ const Categories = () => {
   const { data: categories = [] } = useQuery({
     queryKey: ["categories"],
     queryFn: () =>
-      fetch(" http://localhost:5000/categories").then((res) =>
+      fetch(" https://oto-deals-resell-server.onrender.com/categories").then((res) =>
         res.json()
       ),
   });
@@ -25,9 +25,15 @@ const Categories = () => {
           ></CategoryCard>
         ))}
       </div>
-      <Link to='/allcategories'>
-        <button className="btn bg-gray-900 rounded-lg buttonPlace text-white">View All</button>
+      <div className="flex justify-center">
+        <Link 
+        className="px-3 py-2  rounded-xl bg-gray-900 font-bold text-white"
+        to='/allcategories'>
+          View All
         </Link>
+      </div>
+      <br></br>
+      <br></br>
     </div>
   );
 };
