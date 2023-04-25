@@ -43,16 +43,11 @@ const DashBoardLayout = () => {
                 <li>
                   <Link to="/dashboard/myproduct">My Product</Link>
                 </li>
-                <li>
-                  <Link to="/dashboard/allsellers">All Sellers</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/allbuyers">All Buyers</Link>
-                </li>
+                
               </>
             )}
 
-            {/* {isAdmin && (
+            {isAdmin && (
               <>
                 {" "}
                 <li>
@@ -62,7 +57,7 @@ const DashBoardLayout = () => {
                   <Link to="/dashboard/allbuyers">All Buyers</Link>
                 </li>
               </>
-            )} */}
+            )}
           </ul>
         </div>
       </div>

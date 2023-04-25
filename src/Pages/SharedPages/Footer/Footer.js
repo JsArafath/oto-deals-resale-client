@@ -4,7 +4,7 @@ import image from "../../../assets/Untitled-3.png";
 
 const Footer = () => {
     return (
-        <footer aria-label="Site Footer" className="bg-gray-50 lg:grid lg:grid-cols-5">
+        <footer aria-label="Site Footer" className=" lg:grid lg:grid-cols-5">
           
             <div className="relative block h-96 lg:col-span-2 lg:h-full">
                 <img
@@ -15,10 +15,10 @@ const Footer = () => {
             </div>
 
             <div className="px-4 pt-5 py-16 sm:px-6 lg:col-span-3 lg:px-8">
-              <hr></hr>
+              
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                     <div>
-                        <ul className="flex gap-6 mt-20">
+                        <ul className="flex gap-6 mt-36">
                             <li>
                                 <Link
                                     to="/"

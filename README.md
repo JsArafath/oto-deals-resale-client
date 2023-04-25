@@ -1,7 +1,7 @@
 <h1 align="center">Oto Deal</h1>
 
 #  About Online Oto Deal
-## Live Site: https://oto-deals-products-resell.web.app/
+## Live Site: https://oto-deals-resale.web.app/
 
 
 Here is Some Navbar (Catagories, Blog, Register, Login).
@@ -22,6 +22,7 @@ Everyone can use this simple website and join with our website for enjoy their t
 
 # *  Front-End
     * React JS
+    * Redux
     * Firebase Authentication
     * Tailwind CSS (Daisy UI)
     

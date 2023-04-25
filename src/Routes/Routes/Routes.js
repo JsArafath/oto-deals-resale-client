@@ -20,6 +20,7 @@ import BuyerRoute from "../BuyerRoute/BuyerRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Contact from "../../Pages/Home/Contact/Contact";
 import AllCategories from "../../Pages/Home/Categories/AllCategories";
+import AddJob from "../../Pages/DashBoard/AddProduct/AddJob";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
       { path: "/blog", element: <Blog></Blog> },
       { path: "/contact", element: <Contact></Contact> },
       { path: "/allcategories", element: <AllCategories></AllCategories> },
+      { path: "/addjob", element: <AddJob></AddJob> },
       {
         path: "/allcategories/products/:id",
         element: (
@@ -95,17 +97,17 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/allsellers",
         element: (
-          <SellerRoute>
+          <AdminRoute>
             <AllSellers></AllSellers>
-          </SellerRoute>
+          </AdminRoute>
         ),
       },
       {
         path: "/dashboard/allbuyers",
         element: (
-          <SellerRoute>
+          <AdminRoute>
             <AllBuyers></AllBuyers>
-          </SellerRoute>
+          </AdminRoute>
         ),
       },
       {

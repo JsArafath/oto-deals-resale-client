@@ -1,16 +1,16 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import image from '../../../assets/products/5603789_2949042-removebg-preview.png'
+import image from '../../../assets/products/discount.png'
 
 const Sales = () => {
     return (
 
-        <section className="p-4 lg:p-8 my-6">
+        <section className=" lg:p-8 my-6 px-5 py-20">
             <div className="container mx-auto space-y-12">
 
-                <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
-                    <img src={image} alt="" className=" " />
-                    <div className="flex flex-col justify-center flex-1 p-6 ">
+                <div className="flex pr-9 flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
+                    <img src={image} alt="" className="w-96 mr-9" />
+                    <div className="flex pr-9 pl-9 flex-col justify-center flex-1 p-6 mr-9">
                         <span className="text-xs uppercase ">Sale! Sale! Sale!</span>
                         <h3 className="text-4xl font-bold">Special 50% off for Students!!!</h3>
                         <p className="my-6 font-serif">We care about students. So, we arranged special discounts for students. What are you waiting for? Hurry Up!!</p>

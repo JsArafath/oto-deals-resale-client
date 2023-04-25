@@ -5,12 +5,12 @@ import "./Map.css";
 const Map = () => {
   return (
     <div>
-      <section className="text-gray-600 body-font bg-gray-900">
-        <div className="w-10/12 px-5 py-24 mx-auto flex flex-col md:flex-row justify-between ">
+      <section className="text-gray-600 body-font ">
+        <div className="w-10/12 px-5 py-20 mx-auto flex flex-col md:flex-row justify-between ">
           <div className="w-full md:w-1/2 flex flex-col  justify-center">
             <div className="w-full sm:p-4 px-4 mb-6">
-              <h1 className="title-font font-medium text-xl mb-2 text-gray-300">
-                Sell Your Old Mobile Phone On NextPhone
+              <h1 className="title-font font-medium text-xl mb-2 text-gray-800">
+                Sell Your Old Mobile Phone On Oto Deals
               </h1>
               <div className="leading-relaxed text-gray-400">
                 Want to sell old phone online and get some quick cash? Then,

@@ -1,8 +1,8 @@
 .region {
-    fill: rgb(30, 109, 30);
+    fill: rgb(78, 234, 94);
   }
   .region:hover {
-    fill: #0947cd;
+    fill: #09cd54;
     cursor: pointer;
   }
 

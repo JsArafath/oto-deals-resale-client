@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import { Link } from "react-router-dom";
+import './Categories.css'
 
 const Categories = () => {
   const { data: categories = [] } = useQuery({
@@ -12,24 +13,27 @@ const Categories = () => {
       ),
   });
   return (
-    <div>
+    <div className="mt-9 pt-9">
       <h1 className="text-4xl mt-4 font-bold text-gray-800 text-center">
         Browse By Category
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 p-9 ml-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 p-9 ml-2">
         {categories.slice(0,6).map((category) => (
           <CategoryCard
             key={category.category_id}
             category={category}
           ></CategoryCard>
         ))}
-        <Link to='/allcategories'>
-        <button className="btn btn-primary text-white">View All</button>
-        </Link>
-        
       </div>
+      <Link to='/allcategories'>
+        <button className="btn bg-gray-900 rounded-lg buttonPlace text-white">View All</button>
+        </Link>
     </div>
   );
 };
 
 export default Categories;
+
+
+
+

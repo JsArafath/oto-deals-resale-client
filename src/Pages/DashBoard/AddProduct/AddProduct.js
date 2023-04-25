@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
+// import { toast } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
+import { useProductPostMutation } from "../../../features/product/productApi";
+import { toast } from "react-hot-toast";
 
 const AddProduct = () => {
+  const [postProduct, {isLoading, isError}] = useProductPostMutation();
   const {
     register,
     handleSubmit,
@@ -25,37 +28,19 @@ const AddProduct = () => {
       return data;
     },
   });
+
   const handleProductData = (data) => {
-    const dataInfo = {
-      name: data.name,
-      email: user?.email,
-      id: data.id,
-      resalePrice: data.resalePrice,
-      originalPrice: data.originalPrice,
-      condition: data.condition,
-      phone: data.phone,
-      location: data.location,
-      img: data.img,
-      usedYear: data.purchaseYear,
-      description: data.description,
-      sellerName: user?.displayName,
-    };
-    console.log(dataInfo);
-    fetch(" http://localhost:5000/addedproducts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(dataInfo),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.acknowledged) {
-          toast.success("Successfully added");
-          navigate("/dashboard/myproduct");
-        }
-      });
-  };
+postProduct(data);
+if(data){
+  toast('Added Product Successfully')
+}
+  }
+    if(isLoading){
+      <p>Loading</p>
+    }
+    if(isError){
+      <p>Error</p>
+    }
 
   return (
     <div>
