@@ -1,0 +1,11 @@
+.region {
+    fill: rgb(30, 109, 30);
+  }
+  .region:hover {
+    fill: #0947cd;
+    cursor: pointer;
+  }
+
+
+
+  
