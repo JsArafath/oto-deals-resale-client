@@ -80,11 +80,11 @@ const ProductCard = ({ product, setBookProduct }) => {
                       <dd className="font-bold text-sky-700 text-xl">{name}</dd>
                     </div>
                   </dl>
-                  <dl>
+                  {/* <dl>
                     <div>
                       <dd className="text-sm mt-2"><span className="font-semibold text-sm">Seller Name: </span>{user?.displayName}</dd>
                     </div>
-                  </dl>
+                  </dl> */}
                   <dl>
                     <div>
                       <dd className="text-sm mt-2"><span className="font-semibold text-sm">Location: </span>{location}</dd>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import useToken from "../../hooks/useToken";
+import './SignUp.css'
 
 const SignUp = () => {
   const { createUser, googleSignIn, updateUser, user } =
@@ -48,7 +49,7 @@ const SignUp = () => {
   //   function to save registered users data
   const saveRegisteredUser = (name, email, role) => {
     const registeredUser = { name, email, role };
-    fetch("http://localhost:5000/users", {
+    fetch("https://oto-deals-resell-server.onrender.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -65,7 +66,7 @@ const SignUp = () => {
  
   //   jwt token for registered user
   //   const registeredUserToken = (email) => {
-  //     fetch(` http://localhost:5000/JWT?email=${email}`)
+  //     fetch(` https://oto-deals-resell-server.onrender.com/JWT?email=${email}`)
   //       .then((res) => res.json())
   //       .then((data) => {
   //         if (data.accessToken) {
@@ -86,14 +87,14 @@ const SignUp = () => {
   };
   return (
     <div>
-      <div className="h-[800px] flex justify-center items-center ">
-      <div className="w-96 p-7 bg-gray-800 rounded bg-banner">
-        <h2 className="text-2xl text-white font-bold text-center">Register</h2>
+      <div className="h-[800px] flex justify-start pr-9 m-9 picss rounded-xl items-center ">
+      <div className="w-96 p-7 bg-gray-00 m-9 rounded bg-banner">
+        <h2 className="text-2xl text-gray-700  font-bold text-center">Register</h2>
         <form onSubmit={handleSubmit(handleRegisterform)}>
           <div className="form-control rounded w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text text-white">User Name</span>
+              <span className="label-text text-gray-700">User Name</span>
             </label>
             <input
               type="text"
@@ -107,7 +108,7 @@ const SignUp = () => {
           <div className="form-control  w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text text-white">Email</span>
+              <span className="label-text text-gray-700">Email</span>
             </label>
             <input
               type="text"
@@ -123,7 +124,7 @@ const SignUp = () => {
           <div className="form-control w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text text-white">Password</span>
+              <span className="label-text text-gray-700">Password</span>
             </label>
             <input
               type="password"
@@ -138,7 +139,7 @@ const SignUp = () => {
             />
             <label className="label">
               {" "}
-              <span className="label-text text-white">Account Type</span>
+              <span className="label-text text-gray-700">Account Type</span>
             </label>
             <select
               {...register("type", {})}
@@ -150,14 +151,14 @@ const SignUp = () => {
             </select>
             <label className="label">
               {" "}
-              <span className="label-text text-white">Forget Password?</span>
+              <span className="label-text text-gray-700">Forget Password?</span>
             </label>
             {errors.password && (
               <p className="text-red-600">{errors.password?.message}</p>
             )}
           </div>
           <input
-            className="btn bg-sky-600 rounded w-full"
+            className="btn bg-sky-500 rounded w-full"
             value="Register"
             type="submit"
           />
@@ -165,16 +166,16 @@ const SignUp = () => {
             {signUpError && <p className="text-red-600">{signUpError}</p>}
           </div>
         </form>
-        <p className="text-white text-sm">
+        <p className="text-gray-700 pt-2 pb-2 text-sm">
           Already have an account?{" "}
           <Link className="text-blue-700 font-semibold" to="/login">
             Log In
           </Link>
         </p>
-        <div className="divider text-white">OR</div>
+        {/* <div className="divider text-white">OR</div> */}
         <button
           onClick={handleGoogleSignIn}
-          className="btn btn-outline  text-white w-full"
+          className="btn btn-outline  text-gray-700 w-full"
         >
           CONTINUE WITH GOOGLE
         </button>

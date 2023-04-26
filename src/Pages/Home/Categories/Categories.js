@@ -8,7 +8,7 @@ const Categories = () => {
   const { data: categories = [] } = useQuery({
     queryKey: ["categories"],
     queryFn: () =>
-      fetch(" http://localhost:5000/categories").then((res) =>
+      fetch(" https://oto-deals-resell-server.onrender.com/categories").then((res) =>
         res.json()
       ),
   });

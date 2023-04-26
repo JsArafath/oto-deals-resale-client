@@ -5,7 +5,7 @@ const useToken = (email) => {
 
   useEffect(() => {
     if (email) {
-      fetch(` http://localhost:5000/JWT?email=${email}`)
+      fetch(` https://oto-deals-resell-server.onrender.com/JWT?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.accessToken) {

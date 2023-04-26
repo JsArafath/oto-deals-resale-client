@@ -31,7 +31,7 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
     };
 
     console.log(modalInfo);
-    fetch(" http://localhost:5000/bookeditems", {
+    fetch(" https://oto-deals-resell-server.onrender.com/bookeditems", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -70,15 +70,17 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
               type="text"
               value={user?.displayName}
               name="Username"
+              disabled
               placeholder="User Name"
-              className="input w-full bg-white "
+              className="input w-full bg-gray-100 "
             />
             <input
               type="email"
               value={user?.email}
               name="email"
+              disabled
               placeholder="Email"
-              className="input w-full bg-white "
+              className="input w-full bg-gray-100 "
             />
             <input
               type="text"
@@ -86,7 +88,7 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
               value={name}
               disabled
               placeholder="Item Name"
-              className="input w-full bg-blue-100"
+              className="input w-full bg-gray-100"
             />
             <input
               type="text"
@@ -94,7 +96,7 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
               value={resalePrice}
               disabled
               placeholder="Price"
-              className="input w-full bg-white"
+              className="input w-full bg-gray-100"
             />
             <input
               type="text"
@@ -108,7 +110,7 @@ const BookNowModal = ({ bookProduct, setBookProduct }) => {
               placeholder="Meeting Location"
               className="input w-full bg-white"
             />
-            <input className="btn btn-primary" type="submit" value="Submit" />
+            <input className="btn bg-gray-700" type="submit" value="Submit" />
           </form>
         </div>
       </div>

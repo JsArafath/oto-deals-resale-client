@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 const MyOrders = () => {
   const { user } = useContext(AuthContext);
-  const url = ` http://localhost:5000/bookeditems?email=${user?.email}`;
+  const url = ` https://oto-deals-resell-server.onrender.com/bookeditems?email=${user?.email}`;
   const { data: bookedItems = [] } = useQuery({
     queryKey: ["bookeditems", user?.email],
     queryFn: async () => {

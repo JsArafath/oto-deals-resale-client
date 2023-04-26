@@ -6,7 +6,7 @@ const AllBuyers = () => {
     queryKey: ["allbuyers"],
     queryFn: async () => {
       const res = await fetch(
-        " http://localhost:5000/users/allbuyers"
+        " https://oto-deals-resell-server.onrender.com/users/allbuyers"
       );
       const data = await res.json();
       return data;
@@ -14,7 +14,7 @@ const AllBuyers = () => {
   });
   const handleDeleteBuyer = (id) => {
     console.log(id);
-    fetch(` http://localhost:5000/buyer/${id}`, {
+    fetch(` https://oto-deals-resell-server.onrender.com/buyer/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 import { useProductPostMutation } from "../../../features/product/productApi";
 import { toast } from "react-hot-toast";
+import './AddProduct.css'
 
 const AddProduct = () => {
   const [postProduct, {isLoading, isError}] = useProductPostMutation();
@@ -22,7 +23,7 @@ const AddProduct = () => {
     queryKey: ["productbrandname"],
     queryFn: async () => {
       const res = await fetch(
-        " http://localhost:5000/productbrandname"
+        " https://oto-deals-resell-server.onrender.com/productbrandname"
       );
       const data = await res.json();
       return data;
@@ -43,15 +44,15 @@ if(data){
     }
 
   return (
-    <div>
-      <h1 className="text-xl font-semibold text-green-900">Add A Product</h1>
+    <div className="p-5">
+      <h1 className="text-2xl pb-2 font-bold text-gray-700">Add A Product</h1>
       <form
         onSubmit={handleSubmit(handleProductData)}
-        className="px-40 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-2 p-3 bg-orange-100"
+        className=" grid grid-cols-1 addpro gap-3 md:grid-cols-2 font-semibold lg:grid-cols-2 p-9 rounded-lg"
       >
-        <div className="form-control">
+        <div className="form-control ">
           <label>
-            <span className="label-text text-xl">Name</span>
+            <span className="label-text text-lg">Name</span>
           </label>
           <select
             {...register("id")}
@@ -67,7 +68,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Product Name</span>
+            <span className="label-text text-lg">Product Name</span>
           </label>
           <input
             {...register("name")}
@@ -78,7 +79,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Resale Price</span>
+            <span className="label-text text-lg">Resale Price</span>
           </label>
           <input
             {...register("resalePrice")}
@@ -89,7 +90,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Original Price</span>
+            <span className="label-text text-lg">Original Price</span>
           </label>
           <input
             {...register("originalPrice")}
@@ -100,7 +101,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Condition</span>
+            <span className="label-text text-lg">Condition</span>
           </label>
           <select
             {...register("condition")}
@@ -114,7 +115,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Mobile Number</span>
+            <span className="label-text text-lg">Mobile Number</span>
           </label>
           <input
             {...register("phone")}
@@ -125,7 +126,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Location</span>
+            <span className="label-text text-lg">Location</span>
           </label>
           <input
             {...register("location")}
@@ -136,7 +137,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Year of Purchase</span>
+            <span className="label-text text-lg">Year of Purchase</span>
           </label>
           <input
             {...register("purchaseYear")}
@@ -147,7 +148,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Image</span>
+            <span className="label-text text-lg">Image</span>
           </label>
           <input
             {...register("img")}
@@ -158,7 +159,7 @@ if(data){
         </div>
         <div className="form-control">
           <label>
-            <span className="label-text text-xl">Description</span>
+            <span className="label-text text-lg">Description</span>
           </label>
           <textarea
             {...register("description")}
@@ -167,7 +168,7 @@ if(data){
           ></textarea>
         </div>
         <button
-          className="btn lg:btn-wide btn-primary  lg:ml-52 mt-4"
+          className="btn lg:btn-wide bg-sky-500 rounded  lg:ml-52 mt-4"
           type="submit"
         >
           Add A Product

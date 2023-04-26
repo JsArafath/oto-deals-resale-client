@@ -41,14 +41,14 @@ const LogIn = () => {
       });
   };
   return (
-    <div className="h-[800px] flex justify-center pics items-center">
-      <div className="w-96 p-7 bg-gray-800 rounded">
-        <h1 className="text-2xl text-center text-white font-bold">Login</h1>
+    <div className="h-[800px] flex justify-end pr-9 pics rounded-xl m-9 items-center">
+      <div className="w-96 p-7 bg-gray-0 rounded">
+        <h1 className="text-2xl text-center text-gray-800 font-bold">Login</h1>
         <form onSubmit={handleSubmit(handleLoginform)}>
           <div className="form-control  w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text text-white">Email</span>
+              <span className="label-text text-gray-700">Email</span>
             </label>
             <input
               type="text"
@@ -64,7 +64,7 @@ const LogIn = () => {
           <div className="form-control w-full max-w-xs">
             <label className="label">
               {" "}
-              <span className="label-text text-white">Password</span>
+              <span className="label-text text-gray-700">Password</span>
             </label>
             <input
               type="password"
@@ -80,7 +80,7 @@ const LogIn = () => {
 
             <label className="label">
               {" "}
-              <span className="label-text text-white">Forget Password?</span>
+              <span className="label-text text-gray-700">Forget Password?</span>
             </label>
             {errors.password && (
               <p className="text-red-600">{errors.password?.message}</p>
@@ -95,7 +95,7 @@ const LogIn = () => {
             {loginError && <p className="text-red-600">{loginError}</p>}
           </div>
         </form>
-        <p className="text-white text-sm">
+        <p className="text-gray-700 text-sm">
           Don't have an account?{" "}
           <Link className="text-blue-700 font-semibold" to="/signup">
             Register
