@@ -27,7 +27,7 @@ const Categories = () => {
       </div>
       <div className="flex justify-center">
         <Link 
-        className="px-3 py-2  rounded-xl bg-gray-900 font-bold text-white"
+        className="px-3 py-2  rounded-xl bg-sky-500 font-bold text-white"
         to='/allcategories'>
           View All
         </Link>

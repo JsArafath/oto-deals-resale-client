@@ -90,7 +90,7 @@ const Banner = () => {
               </p>
               <div className="mt-2">
                 <Link to="/login">
-                  <button className="px-4 py-2 hover:bg-blue-900 bg-blue-600 rounded">
+                  <button className="px-4 py-2 hover:bg-blue-700 bg-sky-600 rounded">
                     Sell Now
                   </button>
                 </Link>

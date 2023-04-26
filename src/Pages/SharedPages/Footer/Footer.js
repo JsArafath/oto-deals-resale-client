@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer aria-label="Site Footer" className=" lg:grid lg:grid-cols-5">
           
-            <div className="relative block h-96 lg:col-span-2 lg:h-full">
+            <div className="relative  h-56 lg:col-span-2 lg:h-full">
                 <img
                     src={image}
                     alt=""

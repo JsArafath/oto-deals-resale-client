@@ -13,12 +13,12 @@ import { initializeApp } from "firebase/app";
 //   appId: process.env.REACT_APP_appId,
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyATLpyH-NaiVhgRgF4KJBt4nOpnNPq3090",
-  authDomain: "oto-deals-resale.firebaseapp.com",
-  projectId: "oto-deals-resale",
-  storageBucket: "oto-deals-resale.appspot.com",
-  messagingSenderId: "328348584174",
-  appId: "1:328348584174:web:bd959de295aeb08af6cbff"
+  apiKey: "AIzaSyDrINIFuE6Wryvviv3Z1BQwp7xHJAeBtjk",
+  authDomain: "oto-deals-resale-bc291.firebaseapp.com",
+  projectId: "oto-deals-resale-bc291",
+  storageBucket: "oto-deals-resale-bc291.appspot.com",
+  messagingSenderId: "520874942031",
+  appId: "1:520874942031:web:954e7e893e77836ed4543a"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

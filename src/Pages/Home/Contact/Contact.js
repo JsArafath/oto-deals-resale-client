@@ -80,8 +80,8 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div data-aos="fade-left" className="shadow-shadow p-10 rounded-lg">
-            <form className="flex flex-col py-6 space-y-6 text-gray-700 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid" ref={form} onSubmit={sendEmail}>
+          <div data-aos="fade-left" className="shadow-shadow rounded-lg ">
+            <form className="flex flex-col border  space-y-6 text-gray-700 p-5 ng-untouched ng-pristine ng-valid" ref={form} onSubmit={sendEmail}>
               <label className="block">
                 <span className="mb-3">Full name</span>
                 <input
@@ -115,7 +115,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
-        </div>
+        </div><br></br>
       </section>
     </div>
   );

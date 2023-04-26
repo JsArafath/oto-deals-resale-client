@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cca11ef0.css",
-    "main.js": "/static/js/main.0b58501e.js",
+    "main.css": "/static/css/main.3c28e6b6.css",
+    "main.js": "/static/js/main.ea1ffd89.js",
     "static/js/787.1066eabb.chunk.js": "/static/js/787.1066eabb.chunk.js",
     "static/media/57946-profile-user-card.gif": "/static/media/57946-profile-user-card.9d2be482a74bc9ad08b0.gif",
     "static/media/90723-cab-booking.gif": "/static/media/90723-cab-booking.42b25959ef8dfafe8a10.gif",
@@ -11,12 +11,12 @@
     "static/media/discount.png": "/static/media/discount.099a8cf43fcd92ff5eb1.png",
     "static/media/samsung-galaxy-q2-5g-black-spin-thumb.jpeg": "/static/media/samsung-galaxy-q2-5g-black-spin-thumb.4e9b1f4c142137edb646.jpeg",
     "index.html": "/index.html",
-    "main.cca11ef0.css.map": "/static/css/main.cca11ef0.css.map",
-    "main.0b58501e.js.map": "/static/js/main.0b58501e.js.map",
+    "main.3c28e6b6.css.map": "/static/css/main.3c28e6b6.css.map",
+    "main.ea1ffd89.js.map": "/static/js/main.ea1ffd89.js.map",
     "787.1066eabb.chunk.js.map": "/static/js/787.1066eabb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cca11ef0.css",
-    "static/js/main.0b58501e.js"
+    "static/css/main.3c28e6b6.css",
+    "static/js/main.ea1ffd89.js"
   ]
 }

@@ -1,8 +1,9 @@
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 import CategoryCard from "../CategoryCard/CategoryCard";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useProductGetQuery } from "../../../features/category/categoryApi";
+import './AllCategories.css'
 
 const AllCategories = () => {
   // const { data: categories = [] } = useQuery({
