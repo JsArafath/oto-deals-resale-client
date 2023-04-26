@@ -9,7 +9,7 @@ const AllCategories = () => {
   // const { data: categories = [] } = useQuery({
   //   queryKey: ["categories"],
   //   queryFn: () =>
-  //     fetch(" https://oto-deals-resell-server.onrender.com/categories").then((res) =>
+  //     fetch(" http://localhost:5000/categories").then((res) =>
   //       res.json()
   //     ),
   // });

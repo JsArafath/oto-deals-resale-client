@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 // import { Link } from 'react-router-dom';
+import { AuthContext } from './../../context/AuthProvider/AuthProvider';
 
 
 const ProductCard = ({ product, setBookProduct }) => {
   // const [loading, setLoading] = useState(true);
+  const { user } = useContext(AuthContext);
   const {
     img,
     location,
     name,
     originalPrice,
     resalePrice,
-    sellerName,
-    usedYear,
+    Username,
+    purchaseYear,
   } = product;
   console.log(product);
   return (
@@ -53,62 +55,56 @@ const ProductCard = ({ product, setBookProduct }) => {
     //   </div>
     // </div>
     <div className=" pt-5 pb-20 bg-white">
-      {/* {loading ? (
-        <h1 className="flex text-xl font-bold justify-center items-center h-screen">
-          {" "}
-          Loading...{" "}
-        </h1>
-      ) : ( */}
         <div className="  gap-4 bg-white">
-          {/* {product.map((product, index) => ( */}
+         
             <div
               // key={index}
-              className="border border-gray-400 rounded-lg bg-white"
+              className="border rounded-lg bg-gray-100"
             >
-              <div className="block rounded-lg p-4 ">
+              <div className="block rounded-lg shadow-lg">
                 <PhotoProvider>
-                  <div className="foo">
+                  <div className="p-4">
                     {/* <PhotoView key={index} src={img}> */}
                       <img
                         alt="Home"
                         src={img}
-                        className="w-56 rounded-md object-cover"
+                        className="w-56 mx-auto rounded-md object-cover"
                       />
                     {/* </PhotoView> */}
                   </div>
                 </PhotoProvider>
 
-                <div className="mt-2">
+                <div className="mt-2 p-4">
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{name}</dd>
+                      <dd className="font-bold text-sky-700 text-xl">{name}</dd>
                     </div>
                   </dl>
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{location}</dd>
+                      <dd className="text-sm mt-2"><span className="font-semibold text-sm">Seller Name: </span>{user?.displayName}</dd>
                     </div>
                   </dl>
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{resalePrice}</dd>
+                      <dd className="text-sm mt-2"><span className="font-semibold text-sm">Location: </span>{location}</dd>
                     </div>
                   </dl>
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{originalPrice}</dd>
+                      <dd className="text-sm mt-2"><span className="font-semibold text-sm">Resale Price: </span> ৳{resalePrice}</dd>
                     </div>
                   </dl>
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{usedYear}</dd>
+                      <dd className="text-sm mt-2"><span className="font-semibold text-sm">Orginal Price: </span>  ৳{originalPrice}</dd>
                     </div>
                   </dl>
                   <dl>
                     <div>
-                      <dd className="font-bold text-xl">{sellerName}</dd>
+                      <dd className="text-sm mt-2"><span className="font-semibold text-sm">Used: </span>{purchaseYear}</dd>
                     </div>
-                  </dl>
+                  </dl>  
                   {/* <dl>
                     <div>
                       <dd className="">{product.discription.slice(0, 100)}</dd>
@@ -116,21 +112,18 @@ const ProductCard = ({ product, setBookProduct }) => {
                   </dl> */}
 
                   <div className="card-actions justify-end">
-                     <button className="btn "></button>
                       <label
                         onClick={() => setBookProduct(product)}
                         htmlFor="booking-modal"
-                        className="btn btn-primary">
+                        className="px-3 py-2  rounded-md bg-sky-600 font-bold text-white">
                           Book Now
                       </label>
                   </div>
                 </div>
               </div>
             </div>
-          
+          </div>
         </div>
-      {/* )} */}
-    </div>
   );
 };
 
