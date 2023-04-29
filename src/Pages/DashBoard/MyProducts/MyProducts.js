@@ -10,7 +10,7 @@ const MyProducts = () => {
     queryKey: ["addedproducts"],
     queryFn: async () => {
       const res = await fetch(
-        ` https://oto-deals-resell-server.onrender.com/addedproducts?email=${user?.email}`
+        ` http://localhost:5000/addedproducts?email=${user?.email}`
       );
       const data = await res.json();
       return data;
@@ -18,7 +18,7 @@ const MyProducts = () => {
   });
   const handleDeleteBySeller = (id) => {
     console.log(id);
-    fetch(` https://oto-deals-resell-server.onrender.com/postedproduct/${id}`, {
+    fetch(` http://localhost:5000/postedproduct/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -47,7 +47,7 @@ const MyProducts = () => {
       sellerName: myProduct.sellerName,
     };
     console.log(advertisedItemData);
-    fetch(" https://oto-deals-resell-server.onrender.com/advertisedproducts", {
+    fetch(" http://localhost:5000/advertisedproducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

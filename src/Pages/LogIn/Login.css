@@ -1,8 +1,17 @@
-.pics{
+.pics1{
 background-image: url('https://i.ibb.co/MCLhNM8/wallpaperflare-com-wallpaper-10.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 height: 100vh;
 }
+
+.pics2{
+    background-image: url('https://i.ibb.co/JBK7C8H/istockphoto-1088991402-612x612.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    }
+    
 

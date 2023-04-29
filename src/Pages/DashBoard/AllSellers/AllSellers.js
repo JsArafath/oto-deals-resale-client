@@ -6,7 +6,7 @@ const AllSellers = () => {
     queryKey: ["allsellers"],
     queryFn: async () => {
       const res = await fetch(
-        " https://oto-deals-resell-server.onrender.com/users/allsellers"
+        " http://localhost:5000/users/allsellers"
       );
       const data = await res.json();
       return data;
@@ -14,7 +14,7 @@ const AllSellers = () => {
   });
   const handleSellerDelete = (id) => {
     console.log(id);
-    fetch(` https://oto-deals-resell-server.onrender.com/seller/${id}`, {
+    fetch(` http://localhost:5000/seller/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -31,7 +31,7 @@ const AllSellers = () => {
   };
   const handleSellerVerify = (id) => {
     console.log(id);
-    fetch(` https://oto-deals-resell-server.onrender.com/seller/verify/${id}`, {
+    fetch(` http://localhost:5000/seller/verify/${id}`, {
       method: "PUT",
     })
       .then((res) => res.json())
@@ -69,19 +69,19 @@ const AllSellers = () => {
                   <td>{allseller.email}</td>
                   {allseller?.type === "verified" ? (
                     <>
-                      <td className="text-blue-800 font-bold text-xl">
+                      <td className="text-green-800 font-bold text-md">
                         verified
                       </td>
                     </>
                   ) : (
                     <>
-                      <td>Unverified</td>
+                      <td className="text-md">Unverified</td>
                     </>
                   )}
                   <td>
                     <button
                       onClick={() => handleSellerDelete(allseller._id)}
-                      className="btn btn-primary btn-xs"
+                      className="btn bg-sky-600 btn-xs"
                       type="submit"
                     >
                       Delete
@@ -90,7 +90,7 @@ const AllSellers = () => {
                   <td>
                     <button
                       onClick={() => handleSellerVerify(allseller._id)}
-                      className="btn btn-primary btn-xs"
+                      className="btn bg-sky-600 btn-xs"
                       type="submit"
                     >
                       Verify

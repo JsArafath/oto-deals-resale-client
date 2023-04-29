@@ -4,15 +4,10 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import useToken from "../../hooks/useToken";
 import './SignUp.css'
-import MobileSignUp from "./MobileSignUp";
-import { getAuth, sendEmailVerification } from "firebase/auth";
-import { toast } from "react-hot-toast";
 
-const SignUp = () => {
+const MobileSignUp = () => {
   const { createUser, googleSignIn, updateUser, user } =
   useContext(AuthContext);
-  const auth = getAuth();
-  const [verified , setVeriffied] = useState(false);
 const {
   register,
   formState: { errors },
@@ -23,7 +18,7 @@ const navigate = useNavigate();
 const [registeredUserEmail, setRegisteredUserEmail] = useState("");
 const [token] = useToken(registeredUserEmail);
 if (token) {
-  navigate("/login");
+  navigate("/");
 }
 //   console.log(user?.displayName);
 
@@ -40,7 +35,6 @@ const handleRegisterform = (data) => {
         displayName: data.userName,
       };
       console.log(userInfo);
-      verifyEmail();
 
       // update user info
       updateUser(userInfo)
@@ -52,13 +46,6 @@ const handleRegisterform = (data) => {
     .catch((err) => console.error(err));
 };
 
-// verify email 
-const verifyEmail = () => {
-  sendEmailVerification(auth.currentUser)
-  .then(() => {
-   setVeriffied(true);
-  });
-}
 //   function to save registered users data
 const saveRegisteredUser = (name, email, role) => {
   const registeredUser = { name, email, role };
@@ -74,7 +61,6 @@ const saveRegisteredUser = (name, email, role) => {
       // registeredUserToken(email);
       setRegisteredUserEmail(email);
       console.log(data);
-     
     });
 };
 
@@ -101,22 +87,14 @@ const handleGoogleSignIn = () => {
 };
   return (
    <div>
-    {/* Dextop */}
-    <div className="lg:block hidden">
+
+
+    {/* Mobile */}
+    <div className="lg:hidden">
     <div>
-      <div className="h-[800px] flex justify-start pr-9 m-9 picss1 rounded-xl items-center ">
+      <div className="h-[800px] flex justify-start mt-5 mb-9 picss2 rounded-xl items-center ">
       <div className="w-96 p-7 bg-gray-00 m-9 rounded bg-banner">
-        <h2 className="text-2xl text-gray-700  font-bold text-center">Register</h2>
-   {
-    verified &&  <div className="toast toast-top toast-end mt-24 mr-12">
-    <div className="alert alert-info">
-      <div className="text-white">
-        <span>Email sent for verification</span>
-      </div>
-    </div>
-    
-  </div>
-   }
+        <h2 className="text-2xl text-gray-700  font-bold text-center mt-9">Register</h2>
         <form onSubmit={handleSubmit(handleRegisterform)}>
           <div className="form-control rounded w-full max-w-xs">
             <label className="label">
@@ -199,7 +177,7 @@ const handleGoogleSignIn = () => {
             Log In
           </Link>
         </p>
-        {/* <div className="divider text-white">OR</div> */}
+        
         <button
           onClick={handleGoogleSignIn}
           className="btn btn-outline  text-gray-700 w-full"
@@ -210,9 +188,8 @@ const handleGoogleSignIn = () => {
     </div>
     </div>
     </div>
-    <MobileSignUp />
    </div>
   );
 };
 
-export default SignUp;
+export default MobileSignUp;

@@ -1,67 +1,31 @@
-import { useContext } from "react";
-import { PhotoProvider, PhotoView } from "react-photo-view";
+import React from "react";
+import { PhotoProvider } from "react-photo-view";
 // import { Link } from 'react-router-dom';
-import { AuthContext } from './../../context/AuthProvider/AuthProvider';
+// import { AuthContext } from './../../context/AuthProvider/AuthProvider';
 
 
 const ProductCard = ({ product, setBookProduct }) => {
   // const [loading, setLoading] = useState(true);
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
   const {
     img,
     location,
     name,
     originalPrice,
     resalePrice,
-    Username,
     purchaseYear,
   } = product;
   console.log(product);
   return (
-    // <div>
-    //   <div className="card w-96 p-10 bg-white text-black shadow-xl">
-    //     <figure>
-    //       <img style={{ height: "250px" }} src={img} alt="Shoes" />
-    //     </figure>
-    //     <div className="card-body">
-    //       <h2 className="card-title text-blue-800">{name}</h2>
-    //       <p className="text-black">
-    //         <span className="font-semibold text-black">Location:</span>{" "}
-    //         {location}
-    //       </p>
-    //       <p>
-    //         <span className="font-semibold">Resale Price</span> : Tk{" "}
-    //         {resalePrice}
-    //       </p>
-    //       <p>
-    //         <span className="font-semibold">Original Price</span> : Tk{" "}
-    //         {originalPrice}
-    //       </p>
-    //       <p>
-    //         <span className="font-semibold">Used</span> : {usedYear}{" "}
-    //       </p>
-    //       <p className="text-xl font-semibold">Seller Name : {sellerName}</p>
-    //       <div className="card-actions justify-end">
-    //         {/* <button className="btn "></button> */}
-    //         <label
-    //           onClick={() => setBookProduct(product)}
-    //           htmlFor="booking-modal"
-    //           className="btn btn-primary"
-    //         >
-    //           Book Now
-    //         </label>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className=" pt-5 pb-20 bg-white">
-        <div className="  gap-4 bg-white">
+    
+    <div className=" pt-5 pb-20 bg-white  ">
+        <div className="  gap-5 bg-white">
          
             <div
               // key={index}
-              className="border rounded-lg bg-gray-100"
+              className="border rounded-lg bg-gray-100 hover:scale-105 ease-in duration-100"
             >
-              <div className="block rounded-lg shadow-lg">
+              <div className="block rounded-lg shadow-lg ">
                 <PhotoProvider>
                   <div className="p-4">
                     {/* <PhotoView key={index} src={img}> */}

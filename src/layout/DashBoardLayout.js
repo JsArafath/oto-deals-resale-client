@@ -29,7 +29,7 @@ const DashBoardLayout = () => {
           <ul className="menu p-4 w-80 bg-base-100 text-base-content">
             {isBuyer && (
               <>
-                <li>
+                <li className="bg-sky-100 rounded text-gray-800 hover:bg-blue-100 hover:text-gray-800">
                   <Link to="/dashboard/myorders">My Orders</Link>
                 </li>
               </>

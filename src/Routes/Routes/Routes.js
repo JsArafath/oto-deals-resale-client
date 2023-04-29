@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
          
         ),
         loader: ({ params }) =>
-          fetch(` https://oto-deals-resell-server.onrender.com/products/${params.id}`),
+          fetch(` http://localhost:5000/products/${params.id}`),
       },
       {
         path: "/products/:id",
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(` https://oto-deals-resell-server.onrender.com/products/${params.id}`),
+          fetch(` http://localhost:5000/products/${params.id}`),
       },
 
     
@@ -118,7 +118,7 @@ export const router = createBrowserRouter([
           </BuyerRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://oto-deals-resell-server.onrender.com/bookings/${params.id}`),
+          fetch(`http://localhost:5000/bookings/${params.id}`),
       },
     ],
   },

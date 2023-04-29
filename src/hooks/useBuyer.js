@@ -5,7 +5,7 @@ const useBuyer = (email) => {
   const [isBuyerLoading, setIsBuyerLoading] = useState(true);
   useEffect(() => {
     if (email) {
-      fetch(` https://oto-deals-resell-server.onrender.com/users/buyers/${email}`)
+      fetch(` http://localhost:5000/users/buyers/${email}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

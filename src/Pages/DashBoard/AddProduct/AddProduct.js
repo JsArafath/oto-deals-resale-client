@@ -23,7 +23,7 @@ const AddProduct = () => {
     queryKey: ["productbrandname"],
     queryFn: async () => {
       const res = await fetch(
-        " https://oto-deals-resell-server.onrender.com/productbrandname"
+        " http://localhost:5000/productbrandname"
       );
       const data = await res.json();
       return data;
@@ -166,6 +166,17 @@ if(data){
             className="textarea  md:w-[320px] lg:w-[320px] textarea-bordered"
             placeholder="Bio"
           ></textarea>
+        </div>
+        <div className="form-control">
+          <label>
+            <span className="label-text text-lg">Seller Name</span>
+          </label>
+          <input
+            {...register("seller")}
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full max-w-xs"
+          />
         </div>
         <button
           className="btn lg:btn-wide bg-sky-500 rounded  lg:ml-52 mt-4"

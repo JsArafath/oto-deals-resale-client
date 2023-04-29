@@ -3,33 +3,55 @@ import React from "react";
 import CategoryCard from "../CategoryCard/CategoryCard";
 // import { Link } from "react-router-dom";
 import { useProductGetQuery } from "../../../features/category/categoryApi";
+import Loading from "../../Loading/Loading";
 import './AllCategories.css'
 
 const AllCategories = () => {
   // const { data: categories = [] } = useQuery({
   //   queryKey: ["categories"],
   //   queryFn: () =>
-  //     fetch(" https://oto-deals-resell-server.onrender.com/categories").then((res) =>
+  //     fetch(" http://localhost:5000/categories").then((res) =>
   //       res.json()
   //     ),
   // });
   const {data,isLoading,isError} =useProductGetQuery();
   console.log(data)
+
+  let content = null;
+
+    if(isLoading && !isError){
+        content = <div><Loading></Loading></div>
+    }
+    if(!isLoading && isError){
+        content = <p>An error occured</p>
+    }
+    if(!isLoading && !isError && data.length ===0){
+        content = <p>No Data Found</p>
+    }
+    if(!isLoading && !isError && data.length>0){
+      content = 
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mb-9 w-[80%] mx-auto items-center justify-center gap-y-10 lg:gap-y-0">
+      {data?.map((category) => (
+        <CategoryCard
+          key={category.category_id}
+          category={category}
+        ></CategoryCard>
+      ))}
+     
+      
+    </div>
+  }
+    
+
+
+
   return (
-    <div>
-      <h1 className="text-4xl mt-4 font-bold text-gray-800 text-center">
+    <div className="mt-2 mb-5">
+      <h1 className="text-4xl mt-4 mb-5 font-bold text-gray-800 text-center">
        All Categories
       </h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 p-9 ml-2">
-        {data?.map((category) => (
-          <CategoryCard
-            key={category.category_id}
-            category={category}
-          ></CategoryCard>
-        ))}
-       
-        
-      </div>
+      {content}
+      
     </div>
   );
 };

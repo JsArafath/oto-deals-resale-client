@@ -8,7 +8,7 @@ const NavBar = () => {
       .then(() => {})
       .catch((error) => console.error(error));
   };
-  console.log(user);
+  
   const menuItems = (
     <React.Fragment>
       <li className="text-sm font-semibold">
@@ -23,25 +23,43 @@ const NavBar = () => {
       <li className="text-sm font-semibold">
         <Link to="/contact">Contact</Link>
       </li>
-      {user?.uid ? (
+      
+      {
+        !user?.emailVerified && 
         <>
-          <li className="text-sm font-semibold">
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li className="text-sm font-semibold">
-            <button onClick={handleLogOut}>signout</button>
-          </li>
-        </>
-      ) : (
+        <li className="text-sm font-semibold">
+          <Link to="/login">Login</Link>
+        </li>
+       
+      </>
+      }
+      {
+        !user?.uid && 
         <>
-          <li className="text-sm font-semibold">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="text-sm font-semibold">
+    
+        <li className="text-sm font-semibold">
             <Link to="/signup">Register</Link>
           </li>
-        </>
-      )}
+        
+       
+      </>
+      }
+      {
+        user?.uid && !user?.emailVerified &&
+        <> 
+      </>
+      }
+      {
+        user?.emailVerified &&  
+        <>
+        <li className="text-sm font-semibold">
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+        <li className="text-sm font-semibold">
+          <button onClick={handleLogOut}>signout</button>
+        </li>
+      </>
+      }
     </React.Fragment>
   );
   return (
