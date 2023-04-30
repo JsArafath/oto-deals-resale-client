@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
          
         ),
         loader: ({ params }) =>
-          fetch(` http://localhost:5000/products/${params.id}`),
+          fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/products/${params.id}`),
       },
       {
         path: "/products/:id",
@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(` http://localhost:5000/products/${params.id}`),
+          fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/products/${params.id}`),
       },
 
     
@@ -118,7 +118,7 @@ export const router = createBrowserRouter([
           </BuyerRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/bookings/${params.id}`),
+          fetch(`https://oto-deals-resale-server-jsarafath.vercel.app/bookings/${params.id}`),
       },
     ],
   },

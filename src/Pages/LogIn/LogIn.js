@@ -1,11 +1,16 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import useToken from "../../hooks/useToken";
 import './Login.css'
 
 const LogIn = () => {
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   const { logIn } = useContext(AuthContext);
 
   const {
@@ -81,7 +86,11 @@ const LogIn = () => {
               })}
               className="input input-bordered w-full  max-w-xs"
             />
-
+            <br></br>
+<ReCAPTCHA
+    sitekey="6LdOXMslAAAAAND24vmD-7CYna0j6ucuZJPriidS"
+    onChange={onChange}
+  />
             <label className="label">
               {" "}
               <span className="label-text text-gray-700">Forget Password?</span>
@@ -111,7 +120,7 @@ const LogIn = () => {
 
     {/* Mobile */}
 
-    {/* <div className="lg:hidden">
+    <div className="lg:hidden">
     <div className=" h-[800px] flex justify-end pr-9 pics2 items-center">
       <div className="w-96 p-7 bg-gray-0 ">
         <h1 className="text-2xl text-center text-gray-200 font-bold">Login</h1>
@@ -174,7 +183,7 @@ const LogIn = () => {
         </p>
       </div>
     </div>
-    </div> */}
+    </div>
     </div>
   );
 };

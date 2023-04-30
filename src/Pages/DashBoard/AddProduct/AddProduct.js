@@ -23,7 +23,7 @@ const AddProduct = () => {
     queryKey: ["productbrandname"],
     queryFn: async () => {
       const res = await fetch(
-        " http://localhost:5000/productbrandname"
+        " https://oto-deals-resale-server-jsarafath.vercel.app/productbrandname"
       );
       const data = await res.json();
       return data;

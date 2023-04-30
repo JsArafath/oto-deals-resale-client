@@ -10,7 +10,7 @@ const MyProducts = () => {
     queryKey: ["addedproducts"],
     queryFn: async () => {
       const res = await fetch(
-        ` http://localhost:5000/addedproducts?email=${user?.email}`
+        ` https://oto-deals-resale-server-jsarafath.vercel.app/addedproducts?email=${user?.email}`
       );
       const data = await res.json();
       return data;
@@ -18,7 +18,7 @@ const MyProducts = () => {
   });
   const handleDeleteBySeller = (id) => {
     console.log(id);
-    fetch(` http://localhost:5000/postedproduct/${id}`, {
+    fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/postedproduct/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -47,7 +47,7 @@ const MyProducts = () => {
       sellerName: myProduct.sellerName,
     };
     console.log(advertisedItemData);
-    fetch(" http://localhost:5000/advertisedproducts", {
+    fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/advertisedproducts", {
       method: "POST",
       headers: {
         "content-type": "application/json",

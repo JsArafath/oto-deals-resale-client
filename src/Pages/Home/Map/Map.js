@@ -6,7 +6,7 @@ const Map = () => {
   return (
     <div>
       {/* Dextop  */}
-      <section className="lg:block hidden pl-9 text-gray-600 body-font ">
+      <section className="lg:block hidden pl-9 text-gray-600 body-font bg-gray-50">
         <div className=" px-5 py-20 mx-auto flex flex-col md:flex-row justify-between ">
           <div className="w-full md:w-1/2 flex flex-col  justify-center">
             <div className="w-full sm:p-4 px-4 mb-6">

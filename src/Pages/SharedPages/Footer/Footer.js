@@ -4,9 +4,9 @@ import image from "../../../assets/Untitled-3.png";
 
 const Footer = () => {
     return (
-        <footer aria-label="Site Footer" className=" lg:grid lg:grid-cols-5">
+        <footer aria-label="Site Footer" className=" lg:grid lg:grid-cols-5 bg-gray-100">
           
-            <div className="relative  h-56 lg:col-span-2 lg:h-full">
+            <div className="relative  h-56 m-5 lg:col-span-2">
                 <img
                     src={image}
                     alt=""

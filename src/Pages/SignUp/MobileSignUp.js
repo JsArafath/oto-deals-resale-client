@@ -6,14 +6,14 @@ import useToken from "../../hooks/useToken";
 import './SignUp.css'
 
 const MobileSignUp = () => {
-  const { createUser, googleSignIn, updateUser, user } =
+  const { createUser, googleSignIn, updateUser } =
   useContext(AuthContext);
 const {
   register,
   formState: { errors },
   handleSubmit,
 } = useForm();
-const [signUpError, setSignUPError] = useState("");
+const [signUpError] = useState("");
 const navigate = useNavigate();
 const [registeredUserEmail, setRegisteredUserEmail] = useState("");
 const [token] = useToken(registeredUserEmail);
@@ -49,7 +49,7 @@ const handleRegisterform = (data) => {
 //   function to save registered users data
 const saveRegisteredUser = (name, email, role) => {
   const registeredUser = { name, email, role };
-  fetch(" http://localhost:5000/users", {
+  fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/users", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -66,7 +66,7 @@ const saveRegisteredUser = (name, email, role) => {
 
 //   jwt token for registered user
 //   const registeredUserToken = (email) => {
-//     fetch(` http://localhost:5000/JWT?email=${email}`)
+//     fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/JWT?email=${email}`)
 //       .then((res) => res.json())
 //       .then((data) => {
 //         if (data.accessToken) {
@@ -92,8 +92,8 @@ const handleGoogleSignIn = () => {
     {/* Mobile */}
     <div className="lg:hidden">
     <div>
-      <div className="h-[800px] flex justify-start mt-5 mb-9 picss2 rounded-xl items-center ">
-      <div className="w-96 p-7 bg-gray-00 m-9 rounded bg-banner">
+      <div className="h-[800px] flex justify-start mt-5 picss2 rounded-xl items-center ">
+      <div className="w-96 p-7 bg-gray-00 rounded bg-banner">
         <h2 className="text-2xl text-gray-700  font-bold text-center mt-9">Register</h2>
         <form onSubmit={handleSubmit(handleRegisterform)}>
           <div className="form-control rounded w-full max-w-xs">
