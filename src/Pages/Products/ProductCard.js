@@ -75,12 +75,19 @@ const ProductCard = ({ product, setBookProduct }) => {
                     </div>
                   </dl> */}
 
-                  <div className="card-actions justify-end">
+                  <div className="card-actions mt-4">
                       <label
                         onClick={() => setBookProduct(product)}
                         htmlFor="booking-modal"
-                        className="px-3 py-2  rounded-md bg-sky-600 font-bold text-white">
+                        className="px-3 py-2  rounded-md bg-sky-600 mr-4 font-bold text-white">
                           Book Now
+                      </label>
+
+                      <label
+                        onClick={() => setBookProduct(product)}
+                        htmlFor="view-modal"
+                        className="px-3 py-2  rounded-md bg-sky-600 font-bold text-white">
+                          View Deatails
                       </label>
                   </div>
                 </div>

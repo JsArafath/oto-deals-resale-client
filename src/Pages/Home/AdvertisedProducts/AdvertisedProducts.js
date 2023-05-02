@@ -6,7 +6,7 @@ const AdvertisedProducts = () => {
     queryKey: ["advertised"],
     queryFn: async () => {
       const res = await fetch(
-        "http://localhost:5000/advertised"
+        "https://oto-deals-resale-server-jsarafath.vercel.app/advertised"
       );
       const data = await res.json();
       return data;
@@ -19,7 +19,7 @@ const AdvertisedProducts = () => {
           <h1 className="text-4xl text-right container font-semibold text-gray-600">
             Advertised
           </h1>
-          <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-3 ml-8 mr-8 mt-4 mb-10">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-2 ml-8 mr-8 mt-4 mb-10">
             {advertisedItems.map((product) => (
               <AdvertisedCard
                 key={product._id}

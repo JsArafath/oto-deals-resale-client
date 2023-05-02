@@ -6,10 +6,9 @@ import useToken from "../../hooks/useToken";
 import './SignUp.css'
 import MobileSignUp from "./MobileSignUp";
 import { getAuth, sendEmailVerification } from "firebase/auth";
-import { toast } from "react-hot-toast";
 
 const SignUp = () => {
-  const { createUser, googleSignIn, updateUser, user } =
+  const { createUser, googleSignIn, updateUser } =
   useContext(AuthContext);
   const auth = getAuth();
   const [verified , setVeriffied] = useState(false);

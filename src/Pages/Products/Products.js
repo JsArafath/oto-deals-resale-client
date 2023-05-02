@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import BookNowModal from "../BookNowModal/BookNowModal";
 import ProductCard from "./ProductCard";
+import ViewModal from "../BookNowModal/ViewModal";
 const Products = () => {
   const [bookProduct, setBookProduct] = useState({});
   const products = useLoaderData();
@@ -20,6 +21,12 @@ const Products = () => {
           setBookProduct={setBookProduct}
           bookProduct={bookProduct}
         ></BookNowModal>
+      )}
+      {bookProduct && (
+        <ViewModal
+          setBookProduct={setBookProduct}
+          bookProduct={bookProduct}
+        ></ViewModal>
       )}
     </div>
   );

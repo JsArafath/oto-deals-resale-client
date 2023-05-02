@@ -7,13 +7,7 @@ import Loading from "../../Loading/Loading";
 import './AllCategories.css'
 
 const AllCategories = () => {
-  // const { data: categories = [] } = useQuery({
-  //   queryKey: ["categories"],
-  //   queryFn: () =>
-  //     fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/categories").then((res) =>
-  //       res.json()
-  //     ),
-  // });
+
   const {data,isLoading,isError} =useProductGetQuery();
   console.log(data)
 
@@ -42,9 +36,6 @@ const AllCategories = () => {
     </div>
   }
     
-
-
-
   return (
     <div className="mt-2 mb-5">
       <h1 className="text-4xl mt-4 mb-5 font-bold text-gray-800 text-center">

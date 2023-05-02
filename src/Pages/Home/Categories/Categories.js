@@ -1,5 +1,4 @@
 import React from "react";
-import { useQuery } from "@tanstack/react-query";
 import CategoryCard from "../CategoryCard/CategoryCard";
 import { useProductGetQuery } from "../../../features/category/categoryApi";
 import { Link } from "react-router-dom";

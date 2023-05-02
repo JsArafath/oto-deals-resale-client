@@ -7,6 +7,8 @@ import Map from './../Map/Map';
 import Contact from './../Contact/Contact';
 import Steps from "../Steps/Steps";
 import Sales from './../Sales/Sales';
+import GoToTop from './GoToTop/goToTop';
+
 
 const Home = () => {
   return (
@@ -18,6 +20,7 @@ const Home = () => {
       <Sales></Sales>
       <Map></Map>
       <Contact></Contact>
+      <GoToTop></GoToTop>
     </div>
   );
 };
