@@ -1,7 +1,7 @@
 <h1 align="center">Oto Deal</h1>
 
 #  About Online Oto Deal
-## Live Site: https://oto-deals-resale-bc291.web.app/
+## Live Site: https://oto-deals.vercel.app/
 
 
 Here is Some Navbar (Catagories, Blog, Register, Login).
