@@ -15,12 +15,12 @@ const Map = () => {
               </h1>
               <div className="leading-relaxed text-gray-400">
                 Want to sell old phone online and get some quick cash? Then,
-                there is no better place than NextPhone; we assure you that.
+                there is no better place than OtoDeals; we assure you that.
                 Forget all those troubles of going to a shop, pleading for the
                 best price and then crossing your fingers for the safety of your
-                data. NextPhone is the new one-stop to sell old phone online;
+                data. OtoDeals is the new one-stop to sell old phone online;
                 it’s like a wish granted by god. Yes, you heard it right. With
-                NextPhone’s smooth user experience, you can sell old phones
+                OtoDeals smooth user experience, you can sell old phones
                 online with just a few clicks. So, stay at your home, and sell
                 old mobile phones right in the comfort of your home at the best
                 possible price. No, that’s not a typo - it’s 100 per cent

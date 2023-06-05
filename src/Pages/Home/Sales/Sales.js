@@ -12,7 +12,7 @@ const Sales = () => {
             <br></br>
             <div className="container mx-auto space-y-12 ">
 
-                <div className="flex pr-9 flex-col  overflow-hidden  shadow-sm lg:flex-row-reverse">
+                <div className="flex pr-9 flex-col  overflow-hidden  lg:flex-row-reverse">
                     <img src={image} alt="" className="w-96 mr-9" />
                     <div className="flex spacee flex-col justify-center flex-1 mr-9">
                         <span className="text-xs uppercase ">Sale! Sale! Sale!</span>
