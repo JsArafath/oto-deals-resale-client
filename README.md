@@ -4,12 +4,12 @@
 ## Live Site: https://oto-deals.vercel.app/
 
 
-Here is Some Navbar (Catagories, Blog, Register, Login).
+Here is Some Navbar (categories, Blog, Register, log in).
 This is a responsive  site. 
-So, Everyone can use it with any devices.
+So, Everyone can use it with any device.
 
 
-## There Are Some Topic About This Site.....
+## There Are Some Topics About This Site.....
 
 # *  Some Tour sections:
     * Sellers can add their products and sell on this website.
