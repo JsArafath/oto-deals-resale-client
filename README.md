@@ -6,7 +6,7 @@
 
 Here is Some Navbar (categories, Blog, Register, log in).
 This is a responsive  site. 
-So, Everyone can use it with any device.
+So everyone can use it on any device.
 
 
 ## There Are Some Topics About This Site.....
@@ -14,7 +14,7 @@ So, Everyone can use it with any device.
 # *  Some Tour sections:
     * Sellers can add their products and sell on this website.
     * Buyers can buy products on this website.
-    * There is a Admin section 
+    * There is an Admin section 
     * Admin can verify users and delete all users
   
 
