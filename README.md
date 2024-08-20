@@ -1,6 +1,6 @@
 <h1 align="center">Oto Deal</h1>
 
-#  About Online Oto Deal
+#  About Online Oto Deal-
 ## Live Site: https://oto-deals.vercel.app/
 
 
