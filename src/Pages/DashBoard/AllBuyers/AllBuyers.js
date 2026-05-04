@@ -6,7 +6,11 @@ const AllBuyers = () => {
     queryKey: ["allbuyers"],
     queryFn: async () => {
       const res = await fetch(
+<<<<<<< HEAD
         " https://oto-deals-resale-server-jsarafath.vercel.app/users/allbuyers"
+=======
+        " https://oto-resale-server-main.vercel.app/users/allbuyers"
+>>>>>>> cf8fad9 (first commit)
       );
       const data = await res.json();
       return data;
@@ -14,7 +18,11 @@ const AllBuyers = () => {
   });
   const handleDeleteBuyer = (id) => {
     console.log(id);
+<<<<<<< HEAD
     fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/buyer/${id}`, {
+=======
+    fetch(` https://oto-resale-server-main.vercel.app/buyer/${id}`, {
+>>>>>>> cf8fad9 (first commit)
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

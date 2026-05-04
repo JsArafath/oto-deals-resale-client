@@ -31,7 +31,11 @@ const ViewModal = ({ bookProduct, setBookProduct }) => {
     };
 
     console.log(modalInfo);
+<<<<<<< HEAD
     fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/bookeditems", {
+=======
+    fetch(" https://oto-resale-server-main.vercel.app/bookeditems", {
+>>>>>>> cf8fad9 (first commit)
       method: "POST",
       headers: {
         "content-type": "application/json",

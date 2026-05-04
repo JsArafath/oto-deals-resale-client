@@ -1,13 +1,23 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
+<<<<<<< HEAD
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
+=======
+import useAdmin from "../../../hooks/useAdmin";
+
+const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const [isAdmin] = useAdmin(user?.email);
+
+>>>>>>> cf8fad9 (first commit)
   const handleLogOut = () => {
     logOut()
       .then(() => {})
       .catch((error) => console.error(error));
   };
+<<<<<<< HEAD
   
   const menuItems = (
     <React.Fragment>
@@ -85,10 +95,89 @@ const NavBar = () => {
           <ul
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+=======
+
+  const menuItems = (
+    <>
+      <li className="text-sm font-semibold">
+        <Link to="/">Home</Link>
+      </li>
+
+      <li className="text-sm font-semibold">
+        <Link to="/allcategories">Categories</Link>
+      </li>
+
+      <li className="text-sm font-semibold">
+        <Link to="/blog">Blog</Link>
+      </li>
+
+      <li className="text-sm font-semibold">
+        <Link to="/contact">Contact</Link>
+      </li>
+
+      {!user?.uid && (
+        <>
+          <li className="text-sm font-semibold">
+            <Link to="/login">Login</Link>
+          </li>
+
+          <li className="text-sm font-semibold">
+            <Link to="/signup">Register</Link>
+          </li>
+        </>
+      )}
+
+      {user?.uid && (
+        <>
+          <li className="text-sm font-semibold">
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+
+          {isAdmin && (
+            <>
+              <li className="text-sm font-semibold">
+                <Link to="/dashboard/allusers">All Users</Link>
+              </li>
+
+              <li className="text-sm font-semibold">
+                <Link to="/dashboard/allbuyers">All Buyers</Link>
+              </li>
+
+              <li className="text-sm font-semibold">
+                <Link to="/dashboard/allsellers">All Sellers</Link>
+              </li>
+
+              <li className="text-sm font-semibold">
+                <Link to="/dashboard/reporteditems">Reported Items</Link>
+              </li>
+            </>
+          )}
+
+          <li className="text-sm font-semibold">
+            <button onClick={handleLogOut}>Logout</button>
+          </li>
+        </>
+      )}
+    </>
+  );
+
+  return (
+    <div className="navbar bg-base-100 flex justify-between px-4 shadow-sm">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            ☰
+          </label>
+
+          <ul
+            tabIndex={0}
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-56 z-50"
+>>>>>>> cf8fad9 (first commit)
           >
             {menuItems}
           </ul>
         </div>
+<<<<<<< HEAD
         <Link to="/" className="btn-none normal-case text-xl">
             <h1 className="text-2xl font-bold ml-5">
               Oto <span className="text-info font-bold">Deals</span>
@@ -118,8 +207,25 @@ const NavBar = () => {
           />
         </svg>
       </label>
+=======
+
+        <Link to="/" className="normal-case text-xl">
+          <h1 className="text-2xl font-bold ml-5">
+            Oto <span className="text-info font-bold">Deals</span>
+          </h1>
+        </Link>
+      </div>
+
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+      </div>
+>>>>>>> cf8fad9 (first commit)
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NavBar;
+=======
+export default NavBar;
+>>>>>>> cf8fad9 (first commit)

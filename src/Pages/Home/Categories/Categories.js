@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import CategoryCard from "../CategoryCard/CategoryCard";
 import { useProductGetQuery } from "../../../features/category/categoryApi";
 import { Link } from "react-router-dom";
@@ -58,12 +59,81 @@ const Categories = () => {
       </div>
       <br></br>
       <br></br>
+=======
+import { Link } from "react-router-dom";
+import CategoryCard from "../CategoryCard/CategoryCard";
+import { useProductGetQuery } from "../../../features/category/categoryApi";
+import Loader from "../../../Ui/Loader";
+import "./Categories.css";
+
+const Categories = () => {
+  const { data = [], isLoading, isError } = useProductGetQuery();
+
+  console.log(data);
+
+  let content;
+
+  if (isLoading) {
+    content = (
+      <div className="flex justify-center py-10">
+        <Loader />
+      </div>
+    );
+  } else if (isError) {
+    content = (
+      <p className="text-center text-red-500 font-semibold">
+        An error occurred
+      </p>
+    );
+  } else if (!data || data.length === 0) {
+    content = (
+      <p className="text-center text-gray-500 font-semibold">
+        No Data Found
+      </p>
+    );
+  } else {
+    content = (
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 w-[80%] gap-5 mx-auto items-center justify-center gap-y-10 pb-5">
+        {data.slice(0, 6).map((category) => (
+          <CategoryCard
+            key={category._id || category.category_id}
+            category={category}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-9 pt-9">
+      <h1 className="text-4xl mt-4 mb-5 font-bold text-gray-800 text-center">
+        Browse By Category
+      </h1>
+
+      {content}
+
+      <div className="flex justify-center">
+        <Link
+          className="px-3 py-2 rounded-xl bg-sky-500 font-bold text-white"
+          to="/allcategories"
+        >
+          View All
+        </Link>
+      </div>
+
+      <br />
+      <br />
+>>>>>>> cf8fad9 (first commit)
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Categories;
 
 
 
 
+=======
+export default Categories;
+>>>>>>> cf8fad9 (first commit)

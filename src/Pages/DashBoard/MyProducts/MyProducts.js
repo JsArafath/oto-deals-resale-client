@@ -10,7 +10,11 @@ const MyProducts = () => {
     queryKey: ["addedproducts"],
     queryFn: async () => {
       const res = await fetch(
+<<<<<<< HEAD
         ` https://oto-deals-resale-server-jsarafath.vercel.app/addedproducts?email=${user?.email}`
+=======
+        ` https://oto-resale-server-main.vercel.app/addedproducts?email=${user?.email}`
+>>>>>>> cf8fad9 (first commit)
       );
       const data = await res.json();
       return data;
@@ -18,7 +22,11 @@ const MyProducts = () => {
   });
   const handleDeleteBySeller = (id) => {
     console.log(id);
+<<<<<<< HEAD
     fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/postedproduct/${id}`, {
+=======
+    fetch(` https://oto-resale-server-main.vercel.app/postedproduct/${id}`, {
+>>>>>>> cf8fad9 (first commit)
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -47,7 +55,11 @@ const MyProducts = () => {
       sellerName: myProduct.sellerName,
     };
     console.log(advertisedItemData);
+<<<<<<< HEAD
     fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/advertisedproducts", {
+=======
+    fetch(" https://oto-resale-server-main.vercel.app/advertisedproducts", {
+>>>>>>> cf8fad9 (first commit)
       method: "POST",
       headers: {
         "content-type": "application/json",

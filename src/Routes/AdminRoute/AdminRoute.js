@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
@@ -18,3 +19,37 @@ const AdminRoute = ({ children }) => {
 };
 
 export default AdminRoute;
+=======
+import { useEffect, useState } from "react";
+
+const useAdmin = (email) => {
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdminLoading, setIsAdminLoading] = useState(true);
+
+  useEffect(() => {
+    if (!email) {
+      setIsAdmin(false);
+      setIsAdminLoading(false);
+      return;
+    }
+
+    setIsAdminLoading(true);
+
+    fetch(`https://oto-resale-server-main.vercel.app/users/admin/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setIsAdmin(data?.isAdmin === true);
+        setIsAdminLoading(false);
+      })
+      .catch((err) => {
+        console.error("Admin check error:", err);
+        setIsAdmin(false);
+        setIsAdminLoading(false);
+      });
+  }, [email]);
+
+  return [isAdmin, isAdminLoading];
+};
+
+export default useAdmin;
+>>>>>>> cf8fad9 (first commit)

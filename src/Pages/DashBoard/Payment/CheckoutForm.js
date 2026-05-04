@@ -15,7 +15,11 @@ const CheckoutForm = ({ bookedData }) => {
 
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
+<<<<<<< HEAD
     fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/create-payment-intent", {
+=======
+    fetch(" https://oto-resale-server-main.vercel.app/create-payment-intent", {
+>>>>>>> cf8fad9 (first commit)
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -72,7 +76,11 @@ const CheckoutForm = ({ bookedData }) => {
         email,
         bookingId: _id,
       };
+<<<<<<< HEAD
       fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/payments", {
+=======
+      fetch(" https://oto-resale-server-main.vercel.app/payments", {
+>>>>>>> cf8fad9 (first commit)
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -61,7 +61,11 @@ const verifyEmail = () => {
 //   function to save registered users data
 const saveRegisteredUser = (name, email, role) => {
   const registeredUser = { name, email, role };
+<<<<<<< HEAD
   fetch(" https://oto-deals-resale-server-jsarafath.vercel.app/users", {
+=======
+  fetch(" https://oto-resale-server-main.vercel.app/users", {
+>>>>>>> cf8fad9 (first commit)
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -79,7 +83,11 @@ const saveRegisteredUser = (name, email, role) => {
 
 //   jwt token for registered user
 //   const registeredUserToken = (email) => {
+<<<<<<< HEAD
 //     fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/JWT?email=${email}`)
+=======
+//     fetch(` https://oto-resale-server-main.vercel.app/JWT?email=${email}`)
+>>>>>>> cf8fad9 (first commit)
 //       .then((res) => res.json())
 //       .then((data) => {
 //         if (data.accessToken) {

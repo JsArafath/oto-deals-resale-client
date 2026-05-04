@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 const MyOrders = () => {
   const { user } = useContext(AuthContext);
+<<<<<<< HEAD
   const url = ` https://oto-deals-resale-server-jsarafath.vercel.app/bookeditems?email=${user?.email}`;
+=======
+  const url = ` https://oto-resale-server-main.vercel.app/bookeditems?email=${user?.email}`;
+>>>>>>> cf8fad9 (first commit)
   const { data: bookedItems = [] } = useQuery({
     queryKey: ["bookeditems", user?.email],
     queryFn: async () => {

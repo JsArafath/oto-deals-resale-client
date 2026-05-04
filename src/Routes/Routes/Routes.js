@@ -21,6 +21,10 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Contact from "../../Pages/Home/Contact/Contact";
 import AllCategories from "../../Pages/Home/Categories/AllCategories";
 import AddJob from "../../Pages/DashBoard/AddProduct/AddJob";
+<<<<<<< HEAD
+=======
+import CategoryProducts from "../../Pages/CategoryProducts/CategoryProducts";
+>>>>>>> cf8fad9 (first commit)
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +39,10 @@ export const router = createBrowserRouter([
       { path: "/contact", element: <Contact></Contact> },
       { path: "/allcategories", element: <AllCategories></AllCategories> },
       { path: "/addjob", element: <AddJob></AddJob> },
+<<<<<<< HEAD
+=======
+      { path: "/category/:categoryId", element: <CategoryProducts></CategoryProducts> }, 
+>>>>>>> cf8fad9 (first commit)
       {
         path: "/allcategories/products/:id",
         element: (
@@ -45,7 +53,11 @@ export const router = createBrowserRouter([
          
         ),
         loader: ({ params }) =>
+<<<<<<< HEAD
           fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/products/${params.id}`),
+=======
+          fetch(` https://oto-resale-server-main.vercel.app/products/${params.id}`),
+>>>>>>> cf8fad9 (first commit)
       },
       {
         path: "/products/:id",
@@ -55,7 +67,11 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
+<<<<<<< HEAD
           fetch(` https://oto-deals-resale-server-jsarafath.vercel.app/products/${params.id}`),
+=======
+          fetch(` https://oto-resale-server-main.vercel.app/products/${params.id}`),
+>>>>>>> cf8fad9 (first commit)
       },
 
     
@@ -118,7 +134,11 @@ export const router = createBrowserRouter([
           </BuyerRoute>
         ),
         loader: ({ params }) =>
+<<<<<<< HEAD
           fetch(`https://oto-deals-resale-server-jsarafath.vercel.app/bookings/${params.id}`),
+=======
+          fetch(`https://oto-resale-server-main.vercel.app/bookings/${params.id}`),
+>>>>>>> cf8fad9 (first commit)
       },
     ],
   },
